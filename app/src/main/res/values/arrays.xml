@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notes">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+    </string-array>
+
+
+    <string-array name="contents">
+
+        <item>Здал пркатическое задания дз шестого урока</item>
+        <item>Проанилизировать дз седьмого урока</item>
+        <item>Разгрузечный день погулять в парке</item>
+        <item>Новая тема курса Андройд платформа</item>
+        <item>Изучить материалы от новой темы</item>
+        <item>Сдать все долги по дз курса</item>
+        <item>День просмотра фильма чтение книг и различные статьи по темам it индустрия</item>
+    </string-array>
+
+    <string-array name="date">
+        <item>14.02.2022.</item>
+        <item>15.02.2022.</item>
+        <item>16.02.2022.</item>
+        <item>17.02.2022.</item>
+        <item>18.02.2022.</item>
+        <item>19.02.2022.</item>
+        <item>20.02.2022.</item>
+    </string-array>
+
+
+
+</resources>
