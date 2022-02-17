@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
            getSupportFragmentManager().beginTransaction().replace(R.id.note,notesFragment).commit();
         }
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
-            Note defaultNote = new Note(R.id.content);
+            Note defaultNote = new Note(0);
             ContentFragment contentFragment = ContentFragment.newInstance(defaultNote);
             getSupportFragmentManager().beginTransaction().replace(R.id.content,contentFragment).commit();
         }

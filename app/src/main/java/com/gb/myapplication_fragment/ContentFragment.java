@@ -41,8 +41,8 @@ public class ContentFragment extends Fragment {
         String[] date = getResources().getStringArray(R.array.date);
         TextView textView = new TextView(getContext());
         TextView textViewOne = new TextView(getContext());
-        String dateName = date[0];
-        String contentName = contents[0];
+        String dateName = date[note.getIndex()];
+        String contentName = contents[note.getIndex()];
         textView.setTextSize(30f);
         textViewOne.setTextSize(25f);
         textViewOne.setText(dateName);
