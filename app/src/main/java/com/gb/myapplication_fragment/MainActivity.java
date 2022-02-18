@@ -1,6 +1,7 @@
 package com.gb.myapplication_fragment;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -17,11 +18,14 @@ public class MainActivity extends AppCompatActivity {
             NotesFragment notesFragment = NotesFragment.newInstance();
            getSupportFragmentManager().beginTransaction().replace(R.id.note,notesFragment).commit();
         }
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
-            Note defaultNote = new Note(0);
-            ContentFragment contentFragment = ContentFragment.newInstance(defaultNote);
-            getSupportFragmentManager().beginTransaction().replace(R.id.content,contentFragment).commit();
-        }
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Fragment backStackFragment = (Fragment)getSupportFragmentManager().findFragmentById(R.id.note);
+        if (backStackFragment != null && backStackFragment instanceof ContentFragment){
+            onBackPressed();
+        }
     }
 }
