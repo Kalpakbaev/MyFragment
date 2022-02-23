@@ -19,5 +19,4 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@color/teal_700" />
-
 </LinearLayout>

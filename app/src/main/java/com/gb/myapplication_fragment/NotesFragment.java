@@ -82,6 +82,6 @@ public class NotesFragment extends Fragment {
     }
     private void showPort(){
         ContentFragment contentFragment = ContentFragment.newInstance(currentNote);
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.note,contentFragment).addToBackStack("").commit();
+        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.note,contentFragment).addToBackStack("").commit();
     }
 }
