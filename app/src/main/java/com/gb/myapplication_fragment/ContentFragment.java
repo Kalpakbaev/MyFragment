@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,6 +38,7 @@ public class ContentFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_contents, container, false);
     }
 
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -54,7 +56,8 @@ public class ContentFragment extends Fragment {
         ((LinearLayout) view).addView(textViewOne);
         ((LinearLayout) view).addView(textView);
 
-        view.findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+        getChildFragmentManager().beginTransaction().replace(R.id.container_child,ContentChildFragment.newInstance(note)).addToBackStack("").commit();
+                view.findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 requireActivity().getSupportFragmentManager().popBackStack();
