@@ -6,6 +6,13 @@
     android:background="@color/white"
     android:clickable="true"
     android:orientation="vertical"
+    android:gravity="top"
     tools:context=".ContentFragment">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        android:text="@string/back"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
