@@ -78,7 +78,7 @@ public class NotesFragment extends Fragment {
 
     private void showLand(){
         ContentFragment contentFragment = ContentFragment.newInstance(currentNote);
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content,contentFragment).commit();
+        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.content,contentFragment).commit();
     }
     private void showPort(){
         ContentFragment contentFragment = ContentFragment.newInstance(currentNote);
