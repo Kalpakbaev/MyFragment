@@ -36,12 +36,23 @@ public class ContentChildFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         note = getArguments().getParcelable(ARG_KEY);
-
+        String[] contents = getResources().getStringArray(R.array.contents);
+        String[] date = getResources().getStringArray(R.array.date);
+        TextView textView = new TextView(getContext());
+        TextView textViewOne = new TextView(getContext());
+        String dateName = date[note.getIndex()];
+        String contentName = contents[note.getIndex()];
+        textView.setTextSize(30f);
+        textViewOne.setTextSize(25f);
+        textViewOne.setText(dateName);
+        textView.setText(contentName);
+        ((LinearLayout) view).addView(textViewOne);
+        ((LinearLayout) view).addView(textView);
 
         view.findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               getParentFragmentManager().popBackStack();
+           getParentFragmentManager().popBackStack();
             }
         });
     }

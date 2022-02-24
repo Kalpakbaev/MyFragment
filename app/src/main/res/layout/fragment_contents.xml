@@ -8,6 +8,10 @@
     android:orientation="vertical"
     android:gravity="top"
     tools:context=".ContentFragment">
+    <FrameLayout
+        android:id="@+id/container_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/back"
