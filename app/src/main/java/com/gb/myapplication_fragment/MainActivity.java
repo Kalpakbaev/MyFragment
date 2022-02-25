@@ -1,7 +1,9 @@
 package com.gb.myapplication_fragment;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.content.res.Configuration;
@@ -21,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
             NotesFragment notesFragment = NotesFragment.newInstance();
            getSupportFragmentManager().beginTransaction().replace(R.id.note,notesFragment).commit();
         }
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
