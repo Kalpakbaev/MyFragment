@@ -27,24 +27,6 @@ public class ContentFragment extends Fragment {
         fragment.setArguments(bundle);
         return fragment;
     }
-
-    @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_content_fragment,menu);
-        menu.findItem(R.id.action_about).setVisible(false);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_toast:{
-                Toast.makeText(requireContext(), "Toast", Toast.LENGTH_LONG).show();
-            }
-        }
-        return super.onOptionsItemSelected(item);
-                                                                                     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
