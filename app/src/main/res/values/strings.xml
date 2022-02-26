@@ -11,4 +11,5 @@
     <string name="cont">Заметки</string>
     <string name="mynotebook">MyNoteBook</string>
     <string name="str">MenuApp</string>
+    <string name="clear">clear</string>
 </resources>
