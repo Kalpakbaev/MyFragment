@@ -13,4 +13,8 @@
     <string name="str">MenuApp</string>
     <string name="clear">clear</string>
     <string name="exitmynote">ExitMyNote</string>
+    <string name="new_note">new_note</string>
+    <string name="quick_new_note">quick new note</string>
+    <string name="new_noteone">New note</string>
+    <string name="addnote">addNote</string>
 </resources>
