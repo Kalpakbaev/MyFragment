@@ -32,6 +32,16 @@ public class ContentFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_contents, container, false);
     }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_toast: {
+                Toast.makeText(requireContext(), "Toast", Toast.LENGTH_LONG).show();
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
     @Override
