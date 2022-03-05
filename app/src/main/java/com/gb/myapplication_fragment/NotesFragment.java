@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainer;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,14 +57,18 @@ public class NotesFragment extends Fragment {
     }
 
     private void initView(View view) {
+        LinearLayout linearLayout = (LinearLayout)view;
+        LayoutInflater layoutInflater = getLayoutInflater();
         String[] notes = getResources().getStringArray(R.array.notes);
         for (int i = 0; i < notes.length; i++){
             String notesName = notes[i];
-            TextView textView = new TextView(getContext());
+
+            View ListItem = layoutInflater.inflate(R.layout.fragment_notes_list_notes_item,linearLayout,false);
+            linearLayout.addView(ListItem);
+            final int FinalI = i;
+              TextView textView = ListItem.findViewById(R.id.title);
             textView.setTextSize(30f);
             textView.setText(notesName);
-            ((LinearLayout) view).addView(textView);
-            final int FinalI = i;
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -81,7 +86,7 @@ public class NotesFragment extends Fragment {
 
     private void showLand(){
         ContentFragment contentFragment = ContentFragment.newInstance(currentNote);
-        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.content,contentFragment).commit();
+        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.note,contentFragment).commit();
     }
     private void showPort(){
         ContentFragment contentFragment = ContentFragment.newInstance(currentNote);

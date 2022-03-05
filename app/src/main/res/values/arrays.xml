@@ -31,6 +31,16 @@
         <item>19.02.2022.</item>
         <item>20.02.2022.</item>
     </string-array>
+    <array name="pictures">
+        <item>@drawable/nature1</item>
+        <item>@drawable/nature2</item>
+        <item>@drawable/img_1</item>
+        <item>@drawable/img</item>
+        <item>@drawable/nature5</item>
+        <item>@drawable/nature6</item>
+        <item>@drawable/nature7</item>
+    </array>
+
 
 
 

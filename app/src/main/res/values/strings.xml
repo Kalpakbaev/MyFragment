@@ -17,4 +17,6 @@
     <string name="quick_new_note">quick new note</string>
     <string name="new_noteone">New note</string>
     <string name="addnote">addNote</string>
+    <string name="title">Title</string>
+    <string name="weeks">weeks</string>
 </resources>

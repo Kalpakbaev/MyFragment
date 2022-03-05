@@ -6,13 +6,4 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".NotesFragment">
-
-    <TextView
-        android:id="@+id/tv"
-        style="@style/myStyleThemeAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mynotebook"
-        android:textSize="@dimen/tvsize" />
-
 </LinearLayout>
